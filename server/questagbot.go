@@ -152,7 +152,7 @@ func init() {
 	m.Use(render.Renderer())
 	m.Use(martini.Logger())
 	m.Get("/", func(r render.Render) {
-		r.Redirect("https://telegram.me/QuestagBot", 302)
+		r.Redirect("https://telegram.me/dawebot", 302)
 	})
 	m.Post("/bothook", binding.Bind(telegram.Update{}), func(c context.Context, update telegram.Update, w http.ResponseWriter) {
 		httpClient := urlfetch.Client(c)
